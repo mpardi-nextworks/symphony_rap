@@ -6,11 +6,12 @@ import pika
 import logging
 log = logging.getLogger(__name__)
 
+SYMPHONY_PLATFORM_ID = "symphony"
 
-RAP_QUEUE = 'symphony-s_rap-queue'
-RAP_EXCHANGE = "symphony-s_rap-exchange"
-RAP_BINDINGS = {"get.symphony", "set.symphony", "history.symphony",
-                "subscribe.symphony", "unsubscribe.symphony"}
+RAP_QUEUE = SYMPHONY_PLATFORM_ID + "-s_rap-queue"
+RAP_EXCHANGE = SYMPHONY_PLATFORM_ID + "-s_rap-exchange"
+RAP_BINDINGS = {"get." + SYMPHONY_PLATFORM_ID, "set." + SYMPHONY_PLATFORM_ID, "history." + SYMPHONY_PLATFORM_ID,
+                "subscribe." + SYMPHONY_PLATFORM_ID, "unsubscribe." + SYMPHONY_PLATFORM_ID}
 
 
 def configure_queue(channel, handler):
