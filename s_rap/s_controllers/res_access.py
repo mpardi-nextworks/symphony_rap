@@ -1,6 +1,6 @@
 import json
 from tornado.ioloop import IOLoop
-from s_rap.symphony_resource_access_proxy import SYMPHONY_PLATFORM_ID
+from s_rap.platform_id import SYMPHONY_PLATFORM_ID
 import logging
 log = logging.getLogger(__name__)
 

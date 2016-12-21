@@ -1,0 +1,1 @@
+SYMPHONY_PLATFORM_ID = "symphony"
